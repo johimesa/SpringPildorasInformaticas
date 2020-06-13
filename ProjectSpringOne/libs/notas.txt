@@ -1,0 +1,8 @@
+A partir de ahora vamos a usar Spring.
+
+Se va a crear el archivo de conf, el cual se puede hacer de 3 maneras:
+- Archivo de conf. XML
+- Java Source Code
+- Java Annotations
+
+Con este archivo generamos un contenedor spring q nos va a proporcionar beans
