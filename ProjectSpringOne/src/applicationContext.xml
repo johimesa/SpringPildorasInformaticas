@@ -11,12 +11,15 @@
 	<!-- se crea la dependencia antes del bean a llamar -->
 	<bean id="miInforme" class="es.pildoras.ioc.Informe" ></bean>
 	
-	<bean id="empleado" class="es.pildoras.ioc.SecretarioEmpleado">
+	<bean id="empleado" class="es.pildoras.ioc.DirectorEmpleado">
 		
 		<constructor-arg ref="miInforme"></constructor-arg>
 		
 	</bean>
-
 	
+	<!-- Genera D.I. con seter, se pone en el name properties el setInformeNuevo pero en min informeNuevo -->
+	<bean id="miSecretarioEmp" class="es.pildoras.ioc.SecretarioEmpleado">
+		<property name="informeNuevo" ref="miInforme"></property>
+	</bean>
 
 </beans>

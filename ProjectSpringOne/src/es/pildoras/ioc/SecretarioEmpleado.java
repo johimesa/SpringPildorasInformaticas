@@ -4,8 +4,9 @@ public class SecretarioEmpleado implements Empleado {
 
 	// Creación campo CreacionInformes (interfaz)
 	private CreacionInformes informeNuevo;
-	
-	public SecretarioEmpleado(CreacionInformes informeNuevo) {
+
+	// método encargado de hacer la inyección de dependencias
+	public void setInformeNuevo(CreacionInformes informeNuevo) {
 		this.informeNuevo = informeNuevo;
 	}
 

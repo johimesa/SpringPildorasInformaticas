@@ -11,7 +11,7 @@ public class UsoEmpleado {
 		ClassPathXmlApplicationContext contexto = new ClassPathXmlApplicationContext("applicationContext.xml");
 		
 		// 2. pedirle al contexto el objeto o bean
-		Empleado emp1 = contexto.getBean("empleado", Empleado.class);
+		Empleado emp1 = contexto.getBean("miSecretarioEmp", Empleado.class);
 		
 		// 3. usamos el objeto o bean
 		System.out.println(emp1.getTareas());
