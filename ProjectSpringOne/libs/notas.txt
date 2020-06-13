@@ -6,3 +6,14 @@ Se va a crear el archivo de conf, el cual se puede hacer de 3 maneras:
 - Java Annotations
 
 Con este archivo generamos un contenedor spring q nos va a proporcionar beans
+
+
+Inyección de Dependencias (DI)
+La dependencia se da por la modularización (consiste en armar un sistema q esté dividido en partes independientes q se comuniquen para q funcione como una unidad)
+por ej. las partes de un CPU, todos las partes dependen de otros para funcionar.
+Para crear DI son 2 formas fundamentales:
+- Mediante un constructor. en la clase q lo necesite: para eso 3 pasos
+	* Crear la clase e interfaz de la dependencia (para el ej. Informe)
+	* Creación del constructor en la clase para la inyección de dependencias
+	* Configurar la inyección de dependencia en el archivo config XML (applicationContext.xml)
+- Mediante un setter. 

@@ -16,6 +16,8 @@ public class UsoEmpleado {
 		// 3. usamos el objeto o bean
 		System.out.println(emp1.getTareas());
 		
+		System.out.println(emp1.getInformes());
+		
 		// 4. cerrar el contexto - xml
 		contexto.close();
 		
