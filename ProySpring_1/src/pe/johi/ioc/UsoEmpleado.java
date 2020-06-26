@@ -1,14 +1,22 @@
 package pe.johi.ioc;
 
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 public class UsoEmpleado {
 
 	public static void main(String[] args) {
 		
-		// Creación de objetos de tipo empleado
-		IEmpleado empleado = new DirectorEmpleado();
+		// Paso 1. Cargar un contexto - cargar el archivo XML
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 		
-		// uso de los objetos creados
+		// Paso 2. Sacar el bean del context
+		IEmpleado empleado = context.getBean("miBean", IEmpleado.class);
+		
+		// Paso 3. Usar el objeto
 		System.out.println(empleado.getTareas());
+		
+		// Paso 4. Cerrar el XML
+		context.close();
 	}
-
+	
 }
