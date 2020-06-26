@@ -1,0 +1,12 @@
+Inversión de Control (IC) -> principio de Hollywood
+
+- Proporciona modularidad
+- Permite ampliar la funcionalidad de nuestras aplicaciones sin modificar las clases
+- Evita la dependencia entre las clases
+- Flexibiliza nuestras aplicaciones haciéndolas más configurables
+
+Archivo de Configuración: Se crea de las siguientes formas:
+- Archivo de configuración XML
+- Java Source Code
+- Java Annotations
+
