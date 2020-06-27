@@ -10,3 +10,15 @@ Archivo de Configuración: Se crea de las siguientes formas:
 - Java Source Code
 - Java Annotations
 
+
+
+* Modularización: 
+
+Formas de Crear Inyección de Dependencias (Depedendy Inyection):
+- Mediante Constructor: en la clase q lo necesite.
+	* Crear la clase e interfaz de la dependencia (IInforme)
+	* Creación de Constructor en la clase para la inyección de la dependencia
+	* Configurar la inyección de dependencia en archivo XML (ApplicationContext.xml)
+
+- Mediante un setter:
+

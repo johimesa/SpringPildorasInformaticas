@@ -7,6 +7,10 @@ public class SecretarioEmpleado implements IEmpleado{
 		
 		return "Hago las tareas de mi Jefe el Gerente";
 	}
-
 	
+	@Override
+	public String getInformes() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

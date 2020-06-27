@@ -15,6 +15,8 @@ public class UsoEmpleado {
 		// Paso 3. Usar el objeto
 		System.out.println(empleado.getTareas());
 		
+		System.out.println(empleado.getInformes());
+		
 		// Paso 4. Cerrar el XML
 		context.close();
 	}
