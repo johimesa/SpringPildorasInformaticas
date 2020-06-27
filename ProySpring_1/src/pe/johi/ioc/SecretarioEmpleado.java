@@ -2,6 +2,13 @@ package pe.johi.ioc;
 
 public class SecretarioEmpleado implements IEmpleado{
 
+	// Crear campo del Tipo IInforme (interfaz)
+	private IInformes informeNuevo;
+	
+	public void setInformeNuevo(IInformes informeNuevo) {
+		this.informeNuevo = informeNuevo;
+	}
+
 	@Override
 	public String getTareas() {
 		
@@ -10,7 +17,6 @@ public class SecretarioEmpleado implements IEmpleado{
 	
 	@Override
 	public String getInformes() {
-		// TODO Auto-generated method stub
-		return null;
+		return "Informe generado por el secretario: " + informeNuevo.getInformes();
 	}
 }

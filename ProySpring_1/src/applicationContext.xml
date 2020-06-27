@@ -15,4 +15,9 @@
 		<constructor-arg ref="miInforme"></constructor-arg>
 	</bean>
 	
+	<bean id="miSecretario" class="pe.johi.ioc.SecretarioEmpleado">
+		<property name="informeNuevo" ref="miInforme"></property>
+		<!-- name="informeNuevo" viene del setInformeNuevo en la clase -->
+	</bean>
+	
 </beans>
