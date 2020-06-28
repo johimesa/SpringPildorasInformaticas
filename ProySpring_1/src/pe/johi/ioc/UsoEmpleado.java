@@ -10,7 +10,7 @@ public class UsoEmpleado {
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 		
 		// Paso 2. Sacar el bean del context
-		IEmpleado empleado = context.getBean("miBean", IEmpleado.class);
+		JefeEmpleado empleado = context.getBean("miBean", JefeEmpleado.class);
 		SecretarioEmpleado empleado_2 = context.getBean("miSecretario", SecretarioEmpleado.class);
 		
 		// Paso 3. Usar el objeto
@@ -24,6 +24,9 @@ public class UsoEmpleado {
 		
 		System.out.println(empleado_2.getEmail());
 		System.out.println(empleado_2.getNombreEmpresa());
+		
+		System.out.println(empleado.getEmail());		
+		System.out.println(empleado.getNombreEmpresa());
 		// Paso 4. Cerrar el XML
 		context.close();
 	}
