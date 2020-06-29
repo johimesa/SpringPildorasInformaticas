@@ -20,13 +20,30 @@ public class ComercialExperimentado implements Empleado {
 	}
 	
 	
-	CreacionInformeFinanciero nuevoInforme;
+	//CreacionInformeFinanciero nuevoInforme;
 	
 	// Segundo paso: Crear Constructor para inyección en clase que lo solicite
 	//lo q hace es buscar alguna clase q implemente la interfaz CreacionInformeFinanciero, y si encuentra de ahí obtiene la DI
-	@Autowired
+	/*@Autowired
 	public ComercialExperimentado(CreacionInformeFinanciero nuevoInforme) {
 		this.nuevoInforme = nuevoInforme;
 	}
+	*/
+	/*
+	// método setter
+	@Autowired
+	public void setNuevoInforme(CreacionInformeFinanciero nuevoInforme) {
+		this.nuevoInforme = nuevoInforme;
+	} */
 	
+	/*
+	// método cualquiera
+	@Autowired
+	public void setMetodoCualquiera(CreacionInformeFinanciero nuevoInforme) {
+		this.nuevoInforme = nuevoInforme;
+	}*/
+	
+	// con atributo
+	@Autowired
+	CreacionInformeFinanciero nuevoInforme;
 }

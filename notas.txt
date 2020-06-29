@@ -86,3 +86,5 @@ Java Annotations
 		+ Crear la clase + interfaz a inyectar (dependencia)
 		+ Crear Constructor para inyección en clase que lo solicite
 		+ Configurar la dependencia con @Autowired
+
+	- Inyección de Dependencias con setter, método y campo de clase
