@@ -11,7 +11,7 @@
 	<!-- creación de Dependencia -->
 	<bean id="miInforme" class="pe.johi.ioc.Informe" />
 	
-	<bean id="miSecretario" class="pe.johi.ioc.SecretarioEmpleado">
+	<bean id="miSecretario" class="pe.johi.ioc.SecretarioEmpleado" scope="prototype">
 		<property name="informeNuevo" ref="miInforme"></property>
 		<!-- name="informeNuevo" viene del setInformeNuevo en la clase -->
 		
