@@ -46,3 +46,13 @@ Patrones de Diseño:
 		Clonar siempre es más rápido que crear.
 
 	Spring utiliza Singleton por defecto, pero también puede usar este patrón.
+
+
+Ciclo de Vida de los Beans
+- Ejecutar tareas a realizar antes de creación de Bean
+- Ejecutar tareas a realizar después de creación de Bean
+
+Contenedor Spring Iniciado -> Instanciación de Bean -> Inyección de Dependencias -> Procesado del Bean -> Método Init -> Bean listo para su uso ->  Contenedor Spring Apagado -> Método Destroy
+
+	+ Método Init: Dependencias de otros beans, Activación retardada de servicios (abrir socket, conexión BD), etc.
+	+ Método Destroy: Liberar recursos, Cerrar conexiones con BD.
