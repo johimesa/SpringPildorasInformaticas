@@ -56,3 +56,26 @@ Contenedor Spring Iniciado -> Instanciación de Bean -> Inyección de Dependenci
 
 	+ Método Init: Dependencias de otros beans, Activación retardada de servicios (abrir socket, conexión BD), etc.
 	+ Método Destroy: Liberar recursos, Cerrar conexiones con BD.
+
+
+Java Annotations
+	Son etiquetas que se añaden a nuestras clases, métodos, campos, variables, etc. en un programa Java
+	Para qué Sirven.
+		+ Para añadir metadatos a nuestros programas (clases) en Java
+		+ Qué son los metadatos: Un conjunto de datos que describen el contenido y/o propósito de un objeto.
+	Poder describir la naturaleza de un objeto (metadatos) con Annotations nos permite utilizarlas como sustituto de los archivos XML.
+	Las Annotations son procesadas en tiempo de compilación o también en tiempo de ejecución.
+
+	Spring escanea el código de todas nuestras clases en busca de Annotations:
+		- Hay que preparar el XML para que Spring escanee nuestro código.
+	Cuando encuentra un Annotations, registra el bean de forma automática en el contenedor.
+
+	Ventajas:
+	+ Mayor facilidad a la hora de configurar los beans
+	+ Simplifica enormemente el archivo de configuración XML
+	+ Especialmente útil cuando debemos de configurar cientos de beans en un programa.
+
+	Pasos a seguir para utlilizar Annotations:
+	+ preparar el XML para que Spring escanee nuestro código (clases)
+	+ agregar Annotations a nuestra clase Java
+	+ Pedir el bean al contenedor
