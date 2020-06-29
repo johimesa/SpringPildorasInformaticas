@@ -88,3 +88,7 @@ Java Annotations
 		+ Configurar la dependencia con @Autowired
 
 	- Inyección de Dependencias con setter, método y campo de clase
+
+
+	Qualifier:
+	- Especificar bean ID cuando sea necesario

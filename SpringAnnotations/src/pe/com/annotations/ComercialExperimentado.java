@@ -1,6 +1,7 @@
 package pe.com.annotations;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component("ComercialExperimentado") // @Component, si lo dejamos así toma el nombre de la clase pero la primera en minúscula
@@ -45,5 +46,6 @@ public class ComercialExperimentado implements Empleado {
 	
 	// con atributo
 	@Autowired
+	@Qualifier("informeFinancieroTrim3") //bean ID q debe utilizar
 	CreacionInformeFinanciero nuevoInforme;
 }
