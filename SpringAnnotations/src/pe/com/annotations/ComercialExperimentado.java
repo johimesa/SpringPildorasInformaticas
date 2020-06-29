@@ -2,9 +2,11 @@ package pe.com.annotations;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component("ComercialExperimentado") // @Component, si lo dejamos así toma el nombre de la clase pero la primera en minúscula
+@Scope("prototype")
 public class ComercialExperimentado implements Empleado {
 
 	@Override
