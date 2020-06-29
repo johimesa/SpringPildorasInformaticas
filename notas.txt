@@ -12,8 +12,6 @@ Archivo de Configuración: Se crea de las siguientes formas:
 
 
 
-* Modularización: 
-
 Formas de Crear Inyección de Dependencias (Depedendy Inyection):
 - Mediante Constructor: en la clase q lo necesite.
 	* Crear la clase e interfaz de la dependencia (IInforme)
@@ -24,3 +22,27 @@ Formas de Crear Inyección de Dependencias (Depedendy Inyection):
 	* Crear la clase e interfaz de la dependencia (IInforme)
 	* Creación de Constructor en la clase para la inyección de la dependencia
 	* Configurar la inyección de dependencia en archivo XML (ApplicationContext.xml)
+
+Patrones de Diseño:
+* Singleton: Tiene como objetivo asegurar q solo haya una instancia u objeto por clase y un punto de acceso global a ella.
+	- Por qué es necesario:
+		En determinados escenarios debemos asegurarnos que que las clases controlan y gestionan el acceso a un único recurso (ej. fichero abierto).
+		En otro escenarios la necesidad es que diferentes objetos de la aplicación puedan acceder a un tipo de dato en concreto.
+	- Ventajas:
+		Control estricto de cómo se acceden a las instancias
+		Espacio de nombres reducido (mayor claridad de código)
+		Mejor desempeño de la herencia
+	
+	Spring utiliza Singleton por defecto.
+
+
+* Prototype: Tiene como objetivo la creación de varios objetos a partir de un modelo o prototipo. Esto lo hace mediante la clonación de objetos o instancias creadas previamente. Siempre es más óptimo (recursos) clonar un objeto que crear uno nuevo. El objeto clonado tendrá sus propios valores desde setters.
+	- Por qué es necesario:
+		En determinados escenarios que surgen a la hora de programar se necesitan varios objetos con atributos repetidos (comunes)
+
+	- Ventajas:
+		Una aplicación puede crear y eliminar objetos en tiempo de ejecución (esto no lo permiten otros Patrones de Diseño)
+		Permite crear nuevos objetos variando los ya existentes con el consiguiente ahorro de tiempo y recursos.
+		Clonar siempre es más rápido que crear.
+
+	Spring utiliza Singleton por defecto, pero también puede usar este patrón.
