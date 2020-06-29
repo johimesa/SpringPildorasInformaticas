@@ -10,7 +10,7 @@ public class UsoAnnotations {
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 		
 		// pedir un bean al contenedor
-		Empleado tony = context.getBean("comercialExperimentado", Empleado.class);
+		Empleado tony = context.getBean("ComercialExperimentado", Empleado.class);
 		
 		// usar el bean
 		System.out.println(tony.getInformes());

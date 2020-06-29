@@ -1,8 +1,9 @@
 package pe.com.annotations;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-@Component("comercialExperimentado")
+@Component("ComercialExperimentado") // @Component, si lo dejamos así toma el nombre de la clase pero la primera en minúscula
 public class ComercialExperimentado implements Empleado {
 
 	@Override
@@ -14,7 +15,18 @@ public class ComercialExperimentado implements Empleado {
 	@Override
 	public String getInformes() {
 		
-		return "Informe generado por el comercial";
+		//return "Informe generado por el comercial";
+		return nuevoInforme.getInformeFinanciero();
 	}
-
+	
+	
+	CreacionInformeFinanciero nuevoInforme;
+	
+	// Segundo paso: Crear Constructor para inyección en clase que lo solicite
+	//lo q hace es buscar alguna clase q implemente la interfaz CreacionInformeFinanciero, y si encuentra de ahí obtiene la DI
+	@Autowired
+	public ComercialExperimentado(CreacionInformeFinanciero nuevoInforme) {
+		this.nuevoInforme = nuevoInforme;
+	}
+	
 }

@@ -79,3 +79,10 @@ Java Annotations
 	+ preparar el XML para que Spring escanee nuestro código (clases)
 	+ agregar Annotations a nuestra clase Java
 	+ Pedir el bean al contenedor
+
+	
+	Autowired:
+	- Inyección de Dependencias con Constructor
+		+ Crear la clase + interfaz a inyectar (dependencia)
+		+ Crear Constructor para inyección en clase que lo solicite
+		+ Configurar la dependencia con @Autowired
