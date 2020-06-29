@@ -1,12 +1,15 @@
 package pe.com.annotations;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component("ComercialExperimentado") // @Component, si lo dejamos así toma el nombre de la clase pero la primera en minúscula
-@Scope("prototype")
+//@Scope("prototype")
 public class ComercialExperimentado implements Empleado {
 
 	@Override
@@ -50,4 +53,16 @@ public class ComercialExperimentado implements Empleado {
 	@Autowired
 	@Qualifier("informeFinancieroTrim3") //bean ID q debe utilizar
 	CreacionInformeFinanciero nuevoInforme;
+	
+	// Ejecutar tareas a realizar antes de creación de Bean
+	@PostConstruct
+	public void init() {
+		System.out.println("Ejecutado tras la creación del bean");
+	}
+	
+	// Ejecutar tareas a realizar después de creación de Bean
+	@PreDestroy
+	public void distroy() {
+		System.out.println("Ejecutando antes de la destrucción");
+	}
 }

@@ -92,3 +92,9 @@ Java Annotations
 
 	Qualifier:
 	- Especificar bean ID cuando sea necesario
+
+	@PostConstruct y @PreDestroy
+	Ejecutar tareas a realizar antes de creación de Bean, ejecutar tareas a realizar después de creación de Bean con Annotations.
+
+
+	
