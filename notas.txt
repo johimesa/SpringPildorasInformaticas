@@ -100,4 +100,7 @@ Java Annotations
 
 	@Bean: Cómo pedir beans al contenedor de Spring con código Java prescindiendo de XML.
 
+	@PropertySource: permite especificar la ruta al archivo externo de propiedades
+	@Value: permite inyectar el valor de las propiedades desde archivo externo
+
 	

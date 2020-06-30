@@ -1,5 +1,7 @@
 package pe.com.annotations;
 
+import org.springframework.beans.factory.annotation.Value;
+
 public class DirectorFinanciero implements Empleado {
 
 	private CreacionInformeFinanciero informeFinanciero;
@@ -20,4 +22,18 @@ public class DirectorFinanciero implements Empleado {
 		return informeFinanciero.getInformeFinanciero();
 	}
 
+	@Value("${email}")
+	private String email;
+	
+	@Value("${nombreEmpresa}")
+	private String nombreEmpresa;
+
+	public String getEmail() {
+		return email;
+	}
+
+	public String getNombreEmpresa() {
+		return nombreEmpresa;
+	}
+	
 }
