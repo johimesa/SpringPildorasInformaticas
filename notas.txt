@@ -98,4 +98,6 @@ Java Annotations
 
 	@Configuration: Cómo configurar Spring con código Java prescindiendo de XML.
 
+	@Bean: Cómo pedir beans al contenedor de Spring con código Java prescindiendo de XML.
 
+	

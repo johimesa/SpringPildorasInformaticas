@@ -14,12 +14,13 @@ public class UsoAnnotations2 {
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(EmpleadosConfig.class);
 		
 		// pedir un bean al contenedor
-		Empleado tony = context.getBean("ComercialExperimentado", Empleado.class);
-		Empleado tania = context.getBean("ComercialExperimentado", Empleado.class);
+		//Empleado tony = context.getBean("ComercialExperimentado", Empleado.class);
+		//Empleado tania = context.getBean("ComercialExperimentado", Empleado.class);
+		Empleado empleado = context.getBean("directoFinanciero", Empleado.class); // directoFinanciero, lo traigo de EmpleadosConfig
 		
 		// usar el bean
-		System.out.println(tony);
-		System.out.println(tania);
+		System.out.println(empleado.getInformes());
+		System.out.println(empleado.getTareas());
 		
 		// cerrar con contexto
 		context.close();
