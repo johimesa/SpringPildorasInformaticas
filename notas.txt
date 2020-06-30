@@ -96,5 +96,6 @@ Java Annotations
 	@PostConstruct y @PreDestroy
 	Ejecutar tareas a realizar antes de creación de Bean, ejecutar tareas a realizar después de creación de Bean con Annotations.
 
+	@Configuration: Cómo configurar Spring con código Java prescindiendo de XML.
 
-	
+
